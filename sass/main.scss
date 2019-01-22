@@ -1,0 +1,73 @@
+$main-font: 'VT323', monospace;
+$link-background: #F10026;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: 20px;
+    font-family: $main-font;
+}
+
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $link-background;
+    padding: 0.125rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    min-height: 300px;
+    line-height: 1.063rem;
+    padding-left: 0.625rem;
+    &-content {
+  
+    }
+}
+
+.active {
+    background: $link-background;
+    a {
+        color: white;
+    }
+}
+
+i {
+    font-size: 0.938rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background: $link-background;
+        a {
+            color: white;
+        }
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
