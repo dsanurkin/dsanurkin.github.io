@@ -31,7 +31,7 @@ ul {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 92%;
+  width: 500px;
   min-height: 300px;
   line-height: 1.063rem;
   padding-left: 0.625rem; }
@@ -69,3 +69,7 @@ li:hover, li:focus {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 92%; } }
