@@ -937,6 +937,8 @@ blockquote:before {
     width: 60px; }
   .logo {
     display: none; }
+  .ms-left {
+    height: 40vh; }
   h2 {
     font-size: 2rem; }
   .blog-date {
