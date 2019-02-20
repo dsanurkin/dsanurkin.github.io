@@ -37,14 +37,17 @@ ul {
   padding-left: 0.625rem; }
 
 .active {
-  background: #F10026; }
-  .active a {
-    color: white; }
+  background: #F10026;
+  color: white; }
 
 i {
   font-size: 0.938rem; }
 
-.nav-list {
+.main-navigation {
+  padding-left: 0.625rem; }
+
+ul {
+  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,9 +57,8 @@ i {
 
 li:hover, li:focus {
   cursor: pointer;
-  background: #F10026; }
-  li:hover a, li:focus a {
-    color: white; }
+  background: #F10026;
+  color: white; }
 
 .list {
   display: -webkit-box;

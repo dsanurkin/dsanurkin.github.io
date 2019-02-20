@@ -41,16 +41,19 @@ ul {
 
 .active {
     background: $link-background;
-    a {
-        color: white;
-    }
+    color: white;
 }
 
 i {
     font-size: 0.938rem;
 }
 
-.nav-list {
+.main-navigation {
+    padding-left: 0.625rem;
+}
+
+ul {
+    width: 500px;
     display: flex;
     justify-content: space-between;
 }
@@ -60,9 +63,7 @@ li {
     &:focus {
         cursor: pointer;
         background: $link-background;
-        a {
-            color: white;
-        }
+        color: white;
     }
 }
 
