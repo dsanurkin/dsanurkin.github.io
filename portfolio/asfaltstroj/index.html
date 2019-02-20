@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
   <title>Асфальтстрой</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/scrollup.js"></script>
-  <script src="js/menu-trigger.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -18,16 +18,57 @@
           <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
         </div>
         <div class="numbers">
-          <a href="tel:+79255625975" class="number num-header">+7 925 562-59-75</a>
-          <a href="tel:+79852920501" class="number num-header">+7 985 292-05-01</a>
+          <a href="tel:+79255625975" class="number num-header">+7 999 123-45-67</a>
+          <a href="tel:+79852920501" class="number num-header">+7 987 654-32-10</a>
         </div>
         <div class="header_buttons">
   				<div class="callback">
   					<img src="images/call.svg" alt="">
-  					<a href="#" class="callback_link">Обратный звонок</a>
+            <a href="#callback-popup" class="callback_link clb-header">Обратный звонок</a>
+            <div id="callback-popup" class="modal callback-popup mfp-hide">
+              <div class="popup-title">
+                <h2>Обратный звонок</h2>
+              </div>
+              <div class="popup-wrap">
+                  <label for="" class="popup-label">
+                    <span class="popup-span">Ваше имя</span>
+                    <br>
+                    <input type="text" class="modal-input" placeholder="Как к вам обращаться?">
+                  </label>
+                  <label for="" class="popup-label">
+                      <span class="popup-span">Email *</span>
+                      <br>
+                      <input type="text" class="modal-input" placeholder="pochta@me.com">
+                    </label>
+                    <label for="" class="popup-label">
+                        <span class="popup-span">Ваше сообщение</span>
+                        <br>
+                        <textarea type="text" class="modal-input modal-textarea" placeholder="Текст ващего сообщения"></textarea>
+                      </label>
+                    <button type="submit" class="modal-btn">Отправить</button>
+                </div>
+          </div>
   				</div>
   				<div class="header_request">
-  					<a href="#" class="request-btn">Оставить заявку</a>
+            <a href="#request-popup" class="request-btn">Оставить заявку</a>
+            <div id="request-popup" class="modal request-popup mfp-hide">
+              <div class="popup-title">
+                <h2>Оставить заявку</h2>
+              </div>
+              <div class="popup-wrap">
+                <label for="" class="popup-label">
+                  <span class="popup-span">Ваше имя</span>
+                  <br>
+                  <input type="text" class="callback-name modal-input" placeholder="Как к вам обращаться?">
+                </label>
+                <label for="" class="popup-label">
+                    <span class="popup-span">Ваш телефон *</span>
+                    <br>
+                    <input type="text" class="callback-name modal-input" placeholder="+7 (___) ___-__-__">
+                  </label>
+                  <button type="submit" class="modal-btn">Отправить</button>
+              </div>
+            </div>
   				</div>
   			</div>
       </div>
@@ -65,27 +106,43 @@
             </ul>
           </li>
         </ul>
-        <div class="search">
-          <a href="#" class="searchBtn"><img src="images/searchBtn.svg" alt=""></a>
+        <div class="search" id="search">
+          <a href="#"><img src="images/searchBtn.svg" alt=""></a>
         </div>
       </div>
     </div>
   </nav>
   <section class="slider">
-    <div class="container">
-      <div class="slider_content">
-        <div class="slider_text">
-          <p> ПРИ ЗАКАЗЕ </p>
-          от <span class="slider-M">5000</span>м2
-          <p class="slider-Discount">
-            СКИДКА <span class="discount-Amount">10</span><span class="percent">%</span>
-          </p>
-          <div class="slider-btn">
-            <a href="#" class="more-btn">Подробнее</a>
+    <div class="slider-wrap slider1">
+      <div class="container">
+        <div class="slider_content slider1_content">
+          <div class="slider_text slider1-text">
+            <p> ПРИ ЗАКАЗЕ </p>
+            <p>от <span class="slider-M">5000</span>м2<p>
+            <p class="slider-Discount">
+              СКИДКА <span class="discount-Amount">10</span><span class="percent">%</span>
+            </p>
+            <div class="slider-btn">
+              <a href="#" class="more-btn">Подробнее</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="slider-wrap slider2">
+        <div class="container">
+          <div class="slider_content slider2_content">
+            <div class="slider_text slider2-text">
+              <p> ПРИ ЗАКАЗЕ УКЛАДКИ АСФАЛЬТОВОГО ПОКРЫТИЯ</p>
+              <p>от <span class="slider-M">4000</span>м2</p>
+              <p>В нашей фирме в подарок iPad</p>
+              <div class="slider-btn">
+                <a href="#" class="more-btn">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </section>
   <section class="services">
     <div class="container">
@@ -149,7 +206,7 @@
                 </div>
               </div>
               <div class="rent_call">
-                <a href="#">Оставить заявку</a>
+                <a href="#request-popup" class="request-btn">Оставить заявку</a>
                 <div class="call_num">
                   Позвонить
                   <a href="tel:+79852920501"> +7 985 292-05-01</a>
@@ -268,92 +325,92 @@
       <div class="examples_wrap">
         <div class="ex_col">
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex1.png" class="ex">
               <img src="images/ex1.png" alt="example_image">
             </a>
           </div>
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex2.png" class="ex">
               <img src="images/ex2.png" width="246" alt="example_image">
             </a>
           </div>
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex3.png" class="ex">
               <img src="images/ex3.png" alt="example_image">
             </a>
           </div>
         </div>
          <div class="ex_col">
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex4.png" class="ex">
               <img src="images/ex4.png" alt="example_image">
             </a>
           </div>
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex6.png" class="ex">
               <img src="images/ex6.png" alt="example_image">
             </a>
           </div>
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex8.png" class="ex">
               <img src="images/ex8.png" alt="example_image">
             </a>
           </div>
         </div>
         <div class="ex_col">
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex5.png" class="ex">
               <img src="images/ex5.png" alt="example_image">
             </a>
           </div>
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex7.png" class="ex">
               <img src="images/ex7.png" alt="example_image">
             </a>
           </div>
         </div>
         <div class="ex_col">
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex9.png" class="ex">
               <img src="images/ex9.png" alt="example_image">
             </a>
           </div>
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex10.png" class="ex">
               <img src="images/ex10.png" alt="example_image">
             </a>
           </div>
           <div class="example_elem">
-            <a href="#" class="ex">
+            <a href="images/ex11.png" class="ex">
               <img src="images/ex11.png" alt="example_image">
             </a>
           </div>
         </div>
         <div class="ex_col">
          <div class="example_elem">
-           <a href="#" class="ex">
+           <a href="images/ex12.png" class="ex">
              <img src="images/ex12.png" alt="example_image">
            </a>
          </div>
          <div class="example_elem">
-           <a href="#" class="ex">
+           <a href="images/ex13.png" class="ex">
              <img src="images/ex13.png" alt="example_image">
            </a>
          </div>
          <div class="example_elem">
-           <a href="#" class="ex">
+           <a href="images/ex14.png" class="ex">
              <img src="images/ex14.png" alt="example_image">
            </a>
          </div>
        </div>
        <div class="ex_col">
         <div class="example_elem">
-          <a href="#" class="ex">
+          <a href="images/ex15.png" class="ex">
             <img src="images/ex15.png" alt="example_image">
           </a>
         </div>
         <div class="example_elem">
-          <a href="#" class="ex">
+          <a href="images/ex16.png" class="ex">
             <img src="images/ex16.png" alt="example_image">
           </a>
         </div>
@@ -397,24 +454,30 @@
         </div>
         <div class="ft-right">
           <div class="footer_col contacts">
-            <a href="tel:+79255625975" class="number num-footer">+7 925 562-59-75</a>
-            <a href="tel:+79852920501" class="number num-footer">+7 985 292-05-91</a>
-            <span class="address">г. Москва, ул. Промышленная, д. 10,<br> корп. 2, ст. м. «Кантемировская»</span>
+            <a href="tel:+79255625975" class="number num-footer">+7 999 123-45-67</a>
+            <a href="tel:+79852920501" class="number num-footer">+7 987 654-32-10</a>
+            <span class="address">г. Москва, ул. Пушкина, д. 99,<br> корп. 2, ст. м. «Молодежная»</span>
             <a href="mailto:avetis.86@mail.ru" class="email">avetis.86@mail.ru</a>
           </div>
           <div class="footer_col footer__buttons">
-            <a href="#">Оставить заявку</a>
-            <a href="#">Обратный звонок</a>
+            <a href="#request-popup" class="request-btn">Оставить заявку</a>
+            <a href="#callback-popup" class="callback_link">Обратный звонок</a>
             <img src="images/ft_logo.png" alt="logo">
           </div>
         </div>
        <div class="copyright">
-          <span>© 2010—2017 «Асфальтстрой-2000»</span>
+          <span>© 2010—2019 «Асфальтстрой»</span>
           <a href="#">Карта сайта</a>
         </div>
       </div>
     </div>
   </footer>
   <a href="#" class="scrollup"><img src="images/UP.svg" alt="scrollup_button"></a>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scrollup.js"></script>
+  <script src="js/menu-trigger.js"></script>
 </body>
 </html>
