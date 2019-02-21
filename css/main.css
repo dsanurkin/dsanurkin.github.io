@@ -60,6 +60,10 @@ li:hover, li:focus {
   background: #F10026;
   color: white; }
 
+li a:hover,
+li a:focus {
+  color: white; }
+
 .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,4 +78,6 @@ li:hover, li:focus {
 
 @media screen and (max-width: 600px) {
   .main {
-    width: 92%; } }
+    width: 92%; }
+  ul {
+    width: 98%; } }
