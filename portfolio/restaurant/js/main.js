@@ -18,12 +18,16 @@ function toggleHeader(){
     }
 };
 
-
 $(document).scroll(function(){
     toggleHeader();
 })
 
 $(document).ready(function(){
+    $(function () { objectFitImages() });
+  jQuery('.open-nav').click(function(e) {
+    e.preventDefault();
+    jQuery('.menu-icon').toggleClass('opened');
+  });
     $('.slider').slick({
         arrows: false,
         swipe: false,
