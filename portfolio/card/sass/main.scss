@@ -1,0 +1,424 @@
+$bebasfont: Bebas Neue;
+$ubuntufont: 'Ubuntu', sans-serif;
+
+@font-face {
+    font-family: Bebas Neue; 
+    src: url(../fonts/BebasNeueBold.otf); 
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    color: #2d2429;
+    font-family: $bebasfont;
+    font-size: 3.250rem;
+    font-weight: 700;
+}
+
+.container {
+    width: 1409px;
+    margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    &-breadcrumbs {
+        margin-bottom: 30px;
+    }
+    &-title {
+        margin-bottom: 25px;
+    }
+}
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+        display: flex;
+        margin-left: 3px;
+        &--link {
+            font-family: $ubuntufont;
+            color: #7a747a;
+            font-weight: 300;
+            font-size: 0.750rem;
+        }
+    }
+}
+
+.img-desc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.750rem;
+    font-weight: 700;
+    letter-spacing: 0.83px;
+    font-family: $ubuntufont;
+    width: 55px;
+    height: 28px;
+    background-color: #b6cb47;
+    color: #fff;
+}
+
+.main-content {
+    display: flex;
+}
+
+.card-left {
+    display: flex;
+    width: 50%;
+    border: 1px solid #eeeeee;
+    &--thumb {
+        display: flex;
+        margin-bottom: 24px;
+        &__item {
+            margin-left: 10px;
+        }
+    }
+    &--photos {
+        display: flex;
+        width: 85.4%;
+        flex-direction: column;
+    }
+    &--aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 14.6%;
+        padding-top: 24px;
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+    &--main {
+        margin-bottom: 24px;
+    }
+}
+
+.card-right {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+    border-left: 0;
+}
+
+
+hr {
+    display: flex;
+    border: none;
+    border-top: 1px dotted black;
+}
+
+.card {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    padding-top: 24px;
+    &-tags {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+        align-items: center;
+        &--item {
+            font-family: $ubuntufont;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+    }
+    &-specifications {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 41px;
+        &--row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #2d2429;
+            font-family: $ubuntufont;
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.500rem;
+        }
+        &--left {
+            
+        }
+        &--right {
+            
+        }
+        &--line {
+            display: flex;
+            flex-grow: 1;
+            height: 1px;
+            margin: 0px 5px 0px 5px;
+            border-top: 1px dotted #cccccc;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+    &-announcement {
+        color: #2d2429;
+        font-family: $ubuntufont;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    &-more {
+        display: flex;
+        justify-content: space-between;
+        font-family: $bebasfont;
+        font-size: 1.125rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #eeeeee;
+        &--read {
+            display: flex;
+            justify-content: center;
+            width: 160px;
+            height: 43px;
+            background: url(../images/readmore.png) no-repeat 100% 42%;
+        }
+        &--btn {
+            position: relative;
+            display: flex;
+            line-height: 2.250rem;
+            margin-right: 35px;
+            color: #552752;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 11px;
+                height: 12px;
+                top: 9px;
+                right: -17px;
+                background: url(../images/arrow.png) no-repeat;
+            }
+        }
+        &--share {
+            position: relative;
+            line-height: 20px;
+            letter-spacing: 0.45px;
+            a {
+                color: #552752;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 22px;
+                    height: 21px;
+                    top: -2px;
+                    left: -25px;
+                    background: url(../images/share.png) no-repeat;
+                }
+            }
+        }
+    }
+    &-count {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+        &--btn {
+            position: relative;
+            display: block;
+            height: 47px;
+            a {
+                &::after {
+                    z-index: -99;
+                    position: absolute;
+                    left: -24px;
+                    top: 0px;
+                    width: 50px;
+                    height: 100%;
+                    content: '';
+                    background: url(../images/btn-bg.svg) no-repeat;
+                }
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                font-family: $bebasfont;
+                font-size: 1.375rem;
+                font-weight: 700;
+                letter-spacing: 0.55px;
+                margin-left: 25px;
+                padding: 0 45px 0 65px;
+                height: 100%;
+                background-color: #552752;
+                border-top-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                &::before {
+                    position: absolute;
+                    left: 35px;
+                    top: 9px;
+                    content: '';
+                    width: 24px;
+                    height: 25px;
+                    background: url(../images/count-icon.png) no-repeat;
+                }
+            }
+        }
+        &--price {
+            &__text {
+                color: #7a747a;
+                font-family: $ubuntufont;
+                font-size: 0.875rem;
+                font-weight: 400;
+                line-height: 14px;
+                margin-bottom: 17px;
+            }
+            &__sum {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+    &-links {
+        list-style-position: inside;
+        -moz-column-count: 2; 
+        -webkit-column-count: 2; 
+        column-count: 2;
+        list-style-type: decimal;
+        min-height: 200px;
+        &--item {
+            display: flex;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        &--link {
+            font-family: $bebasfont;
+            color: #552752;
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.45px;
+            margin-left: 8px;
+        }
+    }
+}
+
+.sum-with-discount {
+    color: #ce5f96;
+    font-family: $bebasfont;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+}
+.sum-without-discount {
+    color: #2d2429;
+    font-family: $bebasfont;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 42px;
+    text-decoration: line-through;
+    letter-spacing: 0.55px;
+    vertical-align: bottom;
+    margin-left: 18px;
+}
+
+.thumb-active {
+    border: 4px solid #552752;
+}
+
+.tag-discount {
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #ce5f96;
+    padding: 7px 8px 7px 8px;
+}
+
+.tag-green {
+    color: #a6bc31;
+}
+
+.tag-purple {
+    color: #552752;
+}
+
+.thumb-img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.opening-link {
+    position: relative;
+    padding-right: 10px;
+    &::before {
+        position: absolute;
+        content: '';
+        right: 0px;
+        top: 5px;
+        border: 3px solid transparent;
+        border-top: 3px solid #7a747a;
+    }
+}
+
+// Адаптив
+
+@media screen and (max-width: 1425px) {
+    .container {
+        width: 90%;
+    }
+    .card-left--main {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 876px) {
+    .main-content {
+        flex-wrap: wrap;
+    }
+    .card-left {
+        width: 100%;
+        border-bottom: 0;
+    }
+    .card-right {
+        width: 100%;
+        border-left: 1px solid #eeeeee;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body,html {
+        font-size: 15px;
+    }
+    .card-count--btn a {
+    	padding: 0 25px 0 65px;
+  	}
+    .card-specifications--row {
+        font-size: 0.750rem;
+    }
+}
